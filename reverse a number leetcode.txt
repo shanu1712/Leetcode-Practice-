@@ -1,0 +1,25 @@
+
+const reverse = (x)=> {
+    if(x<0) return -1*(-x);
+    const number=(x+"").split('').reverse('').join('');
+   // return number;//this will only work till negative to positive joining//
+    //now 3rd case try krte hain//
+   // if(number>2**31-1){
+   //     return(0)
+   // }else{
+   //     return(number);
+   // }//if else not working//
+    return(number > 2**31-1)?0 :number;
+    
+};
+
+
+
+
+//
+var reverse = function(x) {
+    if(x<0) return -1*reverse(-x);
+    const number=(x+"").split('').reverse('').join('');
+    return(number > 2**31 -1) ? 0 : number;
+    
+};
